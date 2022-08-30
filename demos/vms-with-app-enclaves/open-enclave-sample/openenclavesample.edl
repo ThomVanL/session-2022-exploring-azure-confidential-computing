@@ -1,0 +1,19 @@
+// Copyright (c) Open Enclave SDK contributors.
+// Licensed under the MIT License.
+// https://www.intel.com/content/www/us/en/developer/articles/technical/sgx-intro-passing-data-between-app-and-enclave.html
+// https://github.com/openenclave/openenclave/blob/cd72fd7069488ba6f453c8f5f47bd9fd9a6e6c0d/docs/GettingStartedDocs/Edger8rGettingStarted.md
+
+enclave {
+    from "openenclave/edl/syscall.edl" import *;
+    from "platform.edl" import *;
+
+    trusted {
+        public void enclave_set_secret_value([out]int *returnVal);
+    };
+
+    untrusted {
+        void host_wait_key();
+    };
+};
+
+

@@ -1,0 +1,12 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_PREFIX_PATH=/opt/openenclave/lib/openenclave/cmake"
+    ],
+    "C_Cpp.default.includePath": [
+        "/opt/openenclave/include"
+    ],
+    "C_Cpp.default.systemIncludePath": [
+        "/opt/openenclave/include/openenclave/3rdparty/libc",
+        "/opt/openenclave/include/openenclave/3rdparty/libcxx"
+    ]
+}

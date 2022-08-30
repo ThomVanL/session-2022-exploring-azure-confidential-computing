@@ -1,0 +1,6 @@
+{
+    "alg": "RS256",
+    "jku": "https://sharedeus.eus.attest.azure.net/certs",
+    "kid": "rFl9xM+g7TvX63y0iseZtIn20MD5SYAnGblKFasau8I=",
+    "typ": "JWT"
+}
