@@ -192,9 +192,6 @@ resource networkInterface 'Microsoft.Network/networkInterfaces@2019-07-01' = {
         }
       }
     ]
-    networkSecurityGroup: {
-      id: networkSecurityGroup.id
-    }
   }
   dependsOn:[
     virtualNetwork
