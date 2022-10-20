@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.9.1.41621",
-      "templateHash": "5716240119257736463"
+      "templateHash": "15283871026861778583"
     }
   },
   "parameters": {
@@ -125,7 +125,7 @@
         "version": "latest"
       }
     },
-    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBbYnVpbGQtZXNzZW50aWFsLCAxMi44dWJ1bnR1MS4xXQogIC0gW2NtYWtlLCAzLjE2LjMtMXVidW50dTFdCiAgLSBbZ2l0LCAxOjIuMjUuMS0xdWJ1bnR1My41XQogIC0gW2xpYmN1cmw0LW9wZW5zc2wtZGV2LCA3LjY4LjAtMXVidW50dTIuMTJdCiAgLSBbbGlianNvbmNwcC1kZXYsIDEuNy40LTMuMXVidW50dTJdCnJ1bmNtZDoKICAtIGdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vVGhvbVZhbkwvY29uZmlkZW50aWFsLWNvbXB1dGluZy1jdm0tZ3Vlc3QtYXR0ZXN0YXRpb24uZ2l0CiAgLSB3Z2V0IGh0dHBzOi8vcGFja2FnZXMubWljcm9zb2Z0LmNvbS9yZXBvcy9henVyZWNvcmUvcG9vbC9tYWluL2EvYXpndWVzdGF0dGVzdGF0aW9uMS9hemd1ZXN0YXR0ZXN0YXRpb24xXzEuMC4yX2FtZDY0LmRlYiAtLWRpcmVjdG9yeS1wcmVmaXg9L29wdAogIC0gZHBrZyAtaSAvb3B0L2F6Z3Vlc3RhdHRlc3RhdGlvbjFfMS4wLjJfYW1kNjQuZGVi",
+    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBbYnVpbGQtZXNzZW50aWFsLCAxMi44dWJ1bnR1MV0KICAtIFtjbWFrZSwgMy4xNi4zLTF1YnVudHUxXQogIC0gW2dpdCwgMToyLjI1LjEtMXVidW50dTNdCiAgLSBbbGliY3VybDQtb3BlbnNzbC1kZXYsIDcuNjguMC0xdWJ1bnR1Ml0KICAtIFtsaWJqc29uY3BwLWRldiwgMS43LjQtMy4xdWJ1bnR1Ml0KcnVuY21kOgogIC0gZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9UaG9tVmFuTC9jb25maWRlbnRpYWwtY29tcHV0aW5nLWN2bS1ndWVzdC1hdHRlc3RhdGlvbi5naXQKICAtIHdnZXQgaHR0cHM6Ly9wYWNrYWdlcy5taWNyb3NvZnQuY29tL3JlcG9zL2F6dXJlY29yZS9wb29sL21haW4vYS9hemd1ZXN0YXR0ZXN0YXRpb24xL2F6Z3Vlc3RhdHRlc3RhdGlvbjFfMS4wLjJfYW1kNjQuZGViIC0tZGlyZWN0b3J5LXByZWZpeD0vb3B0CiAgLSBkcGtnIC1pIC9vcHQvYXpndWVzdGF0dGVzdGF0aW9uMV8xLjAuMl9hbWQ2NC5kZWI=",
     "virtualNetworkName": "[format('{0}-vnet', parameters('vmName'))]",
     "subnetName": "[format('{0}-vnet-sn', parameters('vmName'))]",
     "subnetResourceId": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",

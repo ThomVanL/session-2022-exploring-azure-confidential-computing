@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.9.1.41621",
-      "templateHash": "5110880310622267010"
+      "templateHash": "8725985311155234246"
     }
   },
   "parameters": {
@@ -152,7 +152,7 @@
       }
     },
     "isWindows": "[contains(parameters('osImageName'), 'Windows')]",
-    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBbYnVpbGQtZXNzZW50aWFsLCAxMi44dWJ1bnR1MS4xXQogIC0gW2NtYWtlLCAzLjE2LjMtMXVidW50dTFdCiAgLSBbZ2l0LCAxOjIuMjUuMS0xdWJ1bnR1My41XQpydW5jbWQ6CiAgLSBhcHQtZ2V0IC15IGluc3RhbGwgbGludXgtaGVhZGVycy0kKHVuYW1lIC1yKQogIC0gZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9UaG9tVmFuTC9zZXNzaW9uLTIwMjItZXhwbG9yaW5nLWF6dXJlLWNvbmZpZGVudGlhbC1jb21wdXRpbmcuZ2l0",
+    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBbYnVpbGQtZXNzZW50aWFsLCAxMi44dWJ1bnR1MV0KICAtIFtjbWFrZSwgMy4xNi4zLTF1YnVudHUxXQogIC0gW2dpdCwgMToyLjI1LjEtMXVidW50dTNdCnJ1bmNtZDoKICAtIGFwdC1nZXQgLXkgaW5zdGFsbCBsaW51eC1oZWFkZXJzLSQodW5hbWUgLXIpCiAgLSBnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL1Rob21WYW5ML3Nlc3Npb24tMjAyMi1leHBsb3JpbmctYXp1cmUtY29uZmlkZW50aWFsLWNvbXB1dGluZy5naXQ=",
     "ascReportingEndpoint": "[parameters('maaEndpoint')]",
     "disableAlerts": "false",
     "extensionName": "GuestAttestation",
