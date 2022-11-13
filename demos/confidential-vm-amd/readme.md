@@ -8,6 +8,11 @@
 
 Connect to the confidential VM and copy the `confidential-computing-cvm-guest-attestation` directory from `/` to the current user's home directory.
 
+```shell
+cp -r /confidential-computing-cvm-guest-attestation ~
+```
+
+
 ```bash
 # Head into the directory
 cd ~/confidential-computing-cvm-guest-attestation/cvm-guest-attestation-linux-app
@@ -24,4 +29,12 @@ sudo ./AttestationClient
 
 # A jwt-token is shown, which can be decoded with
 # base64 -d
+```
+
+More information regarding the payload can be found over at the "[What is guest attestation for confidential VMs?](https://learn.microsoft.com/en-us/azure/confidential-computing/guest-attestation-confidential-vms)" page.
+
+## Cleanup
+
+```shell
+rm -rf ~/confidential-computing-cvm-guest-attestation
 ```

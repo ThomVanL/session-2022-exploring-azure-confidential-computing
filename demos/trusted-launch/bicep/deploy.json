@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.9.1.41621",
-      "templateHash": "12936986397378730269"
+      "templateHash": "13680032508082405852"
     }
   },
   "parameters": {
@@ -17,11 +17,7 @@
     },
     "location": {
       "type": "string",
-      "allowedValues": [
-        "WestUS",
-        "NorthEurope",
-        "WestEurope"
-      ],
+      "defaultValue": "[resourceGroup().location]",
       "metadata": {
         "description": "Required. Location of the Virtual Machine."
       }
@@ -47,7 +43,7 @@
     },
     "osImageName": {
       "type": "string",
-      "defaultValue": "Windows Server 2022 Gen 2",
+      "defaultValue": "Ubuntu 20.04 LTS Gen 2",
       "allowedValues": [
         "Windows Server 2022 Gen 2",
         "Windows Server 2019 Gen 2",
@@ -152,7 +148,7 @@
       }
     },
     "isWindows": "[contains(parameters('osImageName'), 'Windows')]",
-    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBbYnVpbGQtZXNzZW50aWFsLCAxMi44dWJ1bnR1MV0KICAtIFtjbWFrZSwgMy4xNi4zLTF1YnVudHUxXQogIC0gW2dpdCwgMToyLjI1LjEtMXVidW50dTNdCnJ1bmNtZDoKICAtIGFwdC1nZXQgLXkgaW5zdGFsbCBsaW51eC1oZWFkZXJzLSQodW5hbWUgLXIpCiAgLSBnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL1Rob21WYW5ML3Nlc3Npb24tMjAyMi1leHBsb3JpbmctYXp1cmUtY29uZmlkZW50aWFsLWNvbXB1dGluZy5naXQ=",
+    "cloudInitData": "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcGFja2FnZXM6CiAgLSBidWlsZC1lc3NlbnRpYWwKICAtIGNtYWtlCiAgLSBnaXQKcnVuY21kOgogIC0gYXB0LWdldCAteSBpbnN0YWxsIGxpbnV4LWhlYWRlcnMtJCh1bmFtZSAtcikKICAtIGdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vVGhvbVZhbkwvc2Vzc2lvbi0yMDIyLWV4cGxvcmluZy1henVyZS1jb25maWRlbnRpYWwtY29tcHV0aW5nLmdpdA==",
     "ascReportingEndpoint": "[parameters('maaEndpoint')]",
     "disableAlerts": "false",
     "extensionName": "GuestAttestation",
