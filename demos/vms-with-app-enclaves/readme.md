@@ -8,6 +8,10 @@
 
 Connect to the virtual machine with Intel SGX and copy the `session-2022-exploring-azure-confidential-computing/demos/vms-with-app-enclaves/open-enclave-sample` directory from `/` to the current user's home directory.
 
+```shell
+cp -r /session-2022-exploring-azure-confidential-computing/demos/vms-with-app-enclaves/open-enclave-sample ~
+```
+
 ```bash
 # Head into the directory
 cd ~/open-enclave-sample
@@ -17,7 +21,7 @@ vi host/host.c
 vi enclave/enc.c
 
 # Show the EDL file, which is used to generates the proxy layer.
-vi enclave/enc.c
+vi openenclavesample.edl
 
 # Create the build directory
 mkdir build
@@ -35,7 +39,7 @@ Once the enclave calls the `host_wait_key()` function, we can modify the untrust
 
 ``` bash
 # Load scanmem with default options, which will cause it to search the memory for I32 values.
-scanmem $(pidof build/host/openenclavesample_host)
+sudo scanmem $(pidof openenclavesample_host)
 
 # Search for the value in the trusted (enclave) portion of the app.
 > 123456789
@@ -55,3 +59,9 @@ scanmem $(pidof build/host/openenclavesample_host)
 ```
 
 Head back to the OpenEnclave application and press enter, the the value in the untrusted portion of the app should have been changed!
+
+## Cleanup
+
+```shell
+rm -rf ~/open-enclave-sample
+```

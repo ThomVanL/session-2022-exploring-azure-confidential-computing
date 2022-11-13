@@ -4,12 +4,7 @@ targetScope = 'resourceGroup'
 param vmName string
 
 @description('Required. Location of the Virtual Machine.')
-@allowed([
-  'WestUS'
-  'NorthEurope'
-  'WestEurope'
-])
-param location string
+param location string = resourceGroup().location
 
 @description('Required. Admin username of the Virtual Machine.')
 param adminUsername string
@@ -27,7 +22,7 @@ param vmSize string = 'Standard_D2s_v5'
   'Windows Server 2019 Gen 2'
   'Ubuntu 20.04 LTS Gen 2'
 ])
-param osImageName string = 'Windows Server 2022 Gen 2'
+param osImageName string = 'Ubuntu 20.04 LTS Gen 2'
 
 @description('Optional. OS disk type of the Virtual Machine.')
 @allowed([

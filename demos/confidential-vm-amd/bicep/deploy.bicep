@@ -181,7 +181,6 @@ resource confidentialVm 'Microsoft.Compute/virtualMachines@2021-11-01' = {
       }
     }
     hardwareProfile: {
-      #disable-next-line BCP036
       vmSize: vmSize
     }
     storageProfile: {

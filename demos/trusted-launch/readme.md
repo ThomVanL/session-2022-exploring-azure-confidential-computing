@@ -8,11 +8,15 @@ Trusted launch is integrated with Azure Defender for Cloud to ensure your VMs ar
 
 ## Demo steps to execute
 
-Connect to the trusted launch VM and copy the `session-2022-exploring-azure-confidential-computing/demos/trusted-launch/evil-module` directory from `/` to the current user's home directory.
+Connect to the trusted launch VM and copy the `/session-2022-exploring-azure-confidential-computing/demos/trusted-launch/evil-module` directory from `/` to the current user's home directory.
+
+```shell
+cp -r /session-2022-exploring-azure-confidential-computing/demos/trusted-launch/evil-module ~
+```
 
 Perform the following actions inside the `evil-module` directory:
 
-```bash
+```shell
 # Build kernel module
 make
 
@@ -51,4 +55,15 @@ sudo reboot
 
 # Try to read from the kernel ring buffer
 sudo dmesg | grep Evil
+```
+
+## Cleanup
+
+```shell
+sudo dmesg --clear
+sudo rm -rf /lib/modules/$(uname -r)/kernel/drivers/evil
+sudo sed -i "s|kernel/drivers/evil/evil.ko||g" /lib/modules/$(uname -r)/modules.dep /lib/modules/$(uname -r)/modules.order
+sudo rm /etc/modules-load.d/evil.conf
+sudo depmod -a
+rm -rf ~/evil-module
 ```
