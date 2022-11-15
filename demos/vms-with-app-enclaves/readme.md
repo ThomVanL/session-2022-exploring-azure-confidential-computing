@@ -1,5 +1,7 @@
 # Azure Virtual Machine with SGX enclaves
 
+A demo using the [OpenEnclave SDK](https://openenclave.io/sdk/) and [scanmem](https://github.com/scanmem/scanmem). With scanmem we can use to try to modify the memory contents of the trusted and untrusted portions of an application enclave.
+
 ## Deploy to Azure
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FThomVanL%2Fsession-2022-exploring-azure-confidential-computing%2Fmain%2Fdemos%2Fvms-with-app-enclaves%2Fbicep%2Fdeploy.json)
@@ -65,3 +67,7 @@ Head back to the OpenEnclave application and press enter, the the value in the u
 ```shell
 rm -rf ~/open-enclave-sample
 ```
+
+# Credits
+
+This demo drew inspiration from Tsuyoshi Matsuzaki's (Microsoft Japan) ["Run Application in Intel SGX Enclave (Confidential Computing)"](https://tsmatz.wordpress.com/2022/05/17/confidential-computing-intel-sgx-enclave-getting-started/) blog post. In the blog post, Tsuyoshi walks us through building a small application using the Intel SGX SDK and tries to modify the contents of the enclave's memory. I thought it would be fun to try the same experiment with the OpenEnclave SDK!
