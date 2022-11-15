@@ -1,6 +1,6 @@
 # Azure Virtual Machine with SGX enclaves
 
-A demo using the [OpenEnclave SDK](https://openenclave.io/sdk/) and [scanmem](https://github.com/scanmem/scanmem). With scanmem we can use to try to modify the memory contents of the trusted and untrusted portions of an application enclave.
+A demo using the [OpenEnclave SDK](https://openenclave.io/sdk/) and [scanmem](https://github.com/scanmem/scanmem). With scanmem we can try to modify the memory contents of the trusted and untrusted portions of an application enclave.
 
 ## Deploy to Azure
 
